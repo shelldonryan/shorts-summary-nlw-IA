@@ -1,0 +1,102 @@
+#web .placeholder {
+  color: #7C7C8A;
+  user-select: none;
+}
+
+body #logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 261px;
+  height: 112px;
+  margin: auto;
+}
+
+body #logo h1 {
+  color: #996DFF;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  font-size: 34px;
+  line-height: 100%;
+
+  margin-top: -5px;
+}
+
+body #form {
+  margin-top: 64px;
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+}
+
+body #form input {
+  background: #202024;
+  border-radius: 5px;
+  box-sizing: border-box;
+  width: 452px;
+  height: 48px;
+
+  border: 0;
+  padding: 16px 12px;
+
+  color: #7C7C8A;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 100%;
+}
+
+body #form input:focus {
+  outline: 2px solid #8257E5;
+}
+
+body #form input:valid {
+  background-color: #202024;
+}
+
+body #form button {
+  background: #8257E5 url(/public/playButton.svg) no-repeat center ;
+  
+  border: 0;
+  border-radius: 5px;
+  padding: 12px;
+  
+  width: 48px;
+  height: 48px;
+
+  cursor: pointer;
+  transition: all .2s;
+}
+
+body #form button:hover {
+  background-color: #633bbc;
+}
+
+body #summary {
+  margin-top: 64px;
+}
+
+body #summary #title {
+color: #FFF;
+font-family: 'Roboto', sans-serif;
+font-size: 22px;
+font-style: normal;
+font-weight: 700;
+line-height: 100%;
+
+align-self: flex-start;
+}
+
+body #summary #typography {
+color: #7C7C8A;
+font-family: 'Roboto', sans-serif;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: 100%;
+
+align-self: flex-start;
+text-align: justify;
+width: 512px;
+}
