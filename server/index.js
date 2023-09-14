@@ -4,26 +4,33 @@ import express from 'express'
 import { download } from './download.js'
 import { transcribe } from './transcribe.js'
 import { summarize } from './summarize.js'
+import { convert } from './convert.js'
 
 const app = express()
 app.use(express.json())
 app.use(cors())
 
 app.get('/summary/:id', async (request, response) => {
-  await download(request.params.id)
-  const result = await transcribe()
+  try {
+    await download(request.params.id)
+    const audioConverted = await convert()
+    const result = await transcribe(audioConverted)
 
-  console.log(result)
-
-  return response.json({result: result})
+    return response.json({ result: result })
+  } catch (error) {
+    console.log(error)
+    return response.json({ error })
+  }
 })
 
 app.post('/summary', async (request, response) => {
-  const result = await summarize(request.body.text)
-
-  console.log(result)
-
-  return response.json({result: result})
+  try {
+    const result = await summarize(request.body.text)
+    return response.json({ result: result })
+  } catch (error) {
+    console.log(error)
+    return response.json({ error })
+  }
 })
 
 app.listen(1502, () => console.log("The server is running on port 1502"))
