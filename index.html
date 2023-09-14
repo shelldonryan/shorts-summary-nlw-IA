@@ -1,9 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/svg+xml" href="/logo.svg" />
@@ -12,16 +15,18 @@
   <body>
     <div id="web">
       <div id="logo">
-        <img src="/public/logo.svg" alt="Logo Shorts Summary">
+        <img src="/public/logo.svg" alt="Logo Shorts Summary" />
         <h1>Shorts Summary</h1>
       </div>
-      <div id="form">
-        <input type="url" placeholder="Shorts URL">
+      <form id="form">
+        <input type="url" id="input" placeholder="Shorts URL" />
         <button title="resume"></button>
-      </div>
+      </form>
       <div id="summary">
         <h2 id="title">Summary</h2>
-        <p id="typography" class="placeholder">The summary is being generated. Wait...</p>
+        <p id="typography" class="placeholder">
+          The summary is being generated. Wait...
+        </p>
       </div>
     </div>
     <script type="module" src="web/main.js"></script>
